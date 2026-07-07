@@ -63,9 +63,11 @@ function App() {
                   <p className="text-lg font-bold">{location.name}</p>
                   <p className="whitespace-pre-wrap">{location.description}</p>
                   <div className="flex gap-2 pt-1">
-                    <Button as="a" size="sm" className="flex-1">
+                    <Button asChild size="sm" className="flex-1">
+                      <a className="flex items-center justify-center gap-2 w-full" href={location.links[0]} target="_blank">
                       <Navigation className="size-3.5" />
                       자세히보기
+                      </a>
                     </Button>
                   </div>
                 </div>
