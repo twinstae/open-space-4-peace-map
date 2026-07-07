@@ -1,0 +1,7 @@
+- 디자인 시스템 셋업
+- Open Street Map + mapcn 셋업
+- 요구사항 구체화하기
+- 인수 테스트 케이스 구체화하기
+- siheom test setup
+- formatter 와 lint 셋업
+- tanstack query setup
