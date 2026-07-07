@@ -7,7 +7,8 @@ import {
   MarkerPopup,
   MarkerTooltip,
 } from "@/components/ui/map";
-import { Earth, Rocket } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Earth, Rocket, Navigation, ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/")({ component: App });
 
@@ -27,12 +28,12 @@ const locations = [
   },
 ];
 const JEJU = {
-  lnglat: [126.5666, 33.5666]
-}
+  lnglat: [126.5666, 33.5666],
+};
 
 const DAEJEON = {
-  lnglat: [127.3845, 36.3504]  
-}
+  lnglat: [127.3845, 36.3504],
+};
 
 function App() {
   return (
@@ -59,11 +60,14 @@ function App() {
                   className="relative w-full h-42 overflow-hidden rounded-t-md object-cover"
                 />
                 <div className="space-y-2 p-3">
-                  <p className="text-foreground font-bold">{location.name}</p>
+                  <p className="text-lg font-bold">{location.name}</p>
                   <p className="whitespace-pre-wrap">{location.description}</p>
-                  <a href={location.links[0]} target="_blank" className="underline text-blue-600">
-                    링크1
-                  </a>
+                  <div className="flex gap-2 pt-1">
+                    <Button as="a" size="sm" className="flex-1">
+                      <Navigation className="size-3.5" />
+                      자세히보기
+                    </Button>
+                  </div>
                 </div>
               </MarkerPopup>
             </MapMarker>
